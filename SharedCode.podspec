@@ -30,7 +30,6 @@ Pod::Spec.new do |spec|
             :script => <<-SCRIPT
                 set -ev
                 REPO_ROOT="$PODS_TARGET_SRCROOT"
-                "./gradlew REPO_ROOT="$PODS_TARGET_SRCROOT"
                 "./gradlew build"
             SCRIPT
         }
