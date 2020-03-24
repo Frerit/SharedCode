@@ -1,0 +1,7 @@
+
+enableFeaturePreview('GRADLE_METADATA')
+
+include ':appExito'
+include ':appExito:app'
+include ':appCarulla'
+include ':SharedCode'

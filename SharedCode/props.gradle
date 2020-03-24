@@ -1,0 +1,17 @@
+
+buildkonfig {
+    packageName = "app.shared.appcompania"
+    defaultConfigs {
+        buildConfigField 'STRING', 'name', 'value'
+    }
+    // flavor is passed as a first argument of defaultConfigs
+    defaultConfigs("dev") {
+        buildConfigField 'STRING', 'url_base', 'https://wolframio.grupo-exito.com/apigw'
+    }
+    defaultConfigs("qa") {
+        buildConfigField 'STRING', 'url_base', "value"
+    }
+    defaultConfigs("prod") {
+        buildConfigField 'STRING', 'url_base', "value"
+    }
+}
