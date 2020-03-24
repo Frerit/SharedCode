@@ -30,12 +30,8 @@ Pod::Spec.new do |spec|
             :script => <<-SCRIPT
                 set -ev
                 REPO_ROOT="$PODS_TARGET_SRCROOT"
-                "./gradlew" -p "$REPO_ROOT" :SharedCode:syncFramework \
-                    -Pkotlin.native.cocoapods.target=$KOTLIN_TARGET \
-                    -Pkotlin.native.cocoapods.configuration=$CONFIGURATION \
-                    -Pkotlin.native.cocoapods.cflags="$OTHER_CFLAGS" \
-                    -Pkotlin.native.cocoapods.paths.headers="$HEADER_SEARCH_PATHS" \
-                    -Pkotlin.native.cocoapods.paths.frameworks="$FRAMEWORK_SEARCH_PATHS"
+                "./gradlew REPO_ROOT="$PODS_TARGET_SRCROOT"
+                "./gradlew build"
             SCRIPT
         }
     ]
